@@ -4,7 +4,11 @@ Spree::User.class_eval do
 	  super && self.is_active
 	end
 
-	# def inactive_message
-	#   "Sorry, this account has been deactivated."
-	# end
+	def inactive_message
+	  if !active_for_authentication?
+	  	:not_approved
+    else 
+      super
+    end 
+	end
 end

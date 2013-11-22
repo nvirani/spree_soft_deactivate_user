@@ -1,3 +1,6 @@
 /*
  *= require store/spree_frontend
 */
+.flash.alert {
+background-color: #EE8F00;
+}
